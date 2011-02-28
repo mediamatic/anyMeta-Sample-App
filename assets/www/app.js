@@ -75,9 +75,9 @@ function startApp() {
 	        		callback(
                 		function (tokens) {
                     		// persist for later (don't use cookies because they'll get passed around and in plain text)
-                    		localStorage.setItem(AnyMeta.currentSite + '.oauth_token', tokens['oauth_token']);
-                    		localStorage.setItem(AnyMeta.currentSite + '.oauth_token_secret', tokens['oauth_token_secret']);
-                    		showInfoUploadPicture(tokens['oauth_token'], tokens['oauth_token_scret'])
+                    		localStorage.setItem(AnyMeta.currentSite + '.oauth_token', tokens.oauth_token);
+                    		localStorage.setItem(AnyMeta.currentSite + '.oauth_token_secret', tokens.oauth_token_secret);
+                    		showInfoUploadPicture(tokens.oauth_token, tokens.oauth_token_secret)
                 		},
                 		function (badRequest) {
                     		console.log('Failed to get an access token.');
